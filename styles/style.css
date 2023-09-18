@@ -17,4 +17,143 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--primary-font), Helvetica, sans-serif;
+
+  /* Точечный бэкграунд */
+  background-image: repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7, #1a1a1a);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.header {
+  height: 100vh;
+  display: grid;
+
+  justify-content: center;
+}
+
+.theme-menu {
+  background-color: white;
+  text-align: center;
+  font-family: var(--accent-font);
+  border: 4px black solid;
+  min-height: 323px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 696px;
+  max-height: 364px;
+  margin-top: 102px;
+}
+
+.header-title {
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.header-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.theme-menu__button {
+  border: none;
+  background-color: none;
+}
+
+.theme-menu__button:disabled {
+  margin-inline-start: 20px;
+}
+
+main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 4px black solid;
+  max-width: min-content;
+}
+
+.card-img {
+}
+
+.card__image-container::before {
+  content: "</HTML>";
+  display: block;
+  position: absolute;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.card-title {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* .card-title::after {
+  content: "HTML";
+  position: absolute;
+} */
+
+.card-text {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 116.667% */
+}
+
+.card__footer-text {
+  margin-block-start: 27px;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 116.667% */
+}
+
+.card-btn {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  max-width: 130px;
+  border: 2px solid black;
+  padding: 5px 13px;
+}
+
+/* .card-btn::before {
+  content: "heart";
+} */
