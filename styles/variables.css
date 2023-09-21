@@ -3,4 +3,16 @@
 :root {
   --primary-font: "Inter";
   --accent-font: "PressStart2P";
+  /* Укажи дополнительные шрифты */
+
+  --main-font-color: black;
+
+  --main-bg-color: white;
+
+  --btn-text-color: white;
+  /* у темной темы черный вроде */
+
+  --btn-transition-color: black;
+  /* у темной зеленый */
+  /* 00CC14 */
 }
