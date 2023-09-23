@@ -10,6 +10,7 @@
   font-family: "Inter";
   src: url(/fonts/Inter-Variable.woff2) format("woff2 supports variations"),
     url(/fonts/Inter-Variable.woff2) format("woff2-variations");
-  /* font-weight: normal; */
+  font-weight: 400 785; /* Указание начертаний */
   font-display: swap;
+  font-variation-settings: "wght" 400, "wght" 785;
 }

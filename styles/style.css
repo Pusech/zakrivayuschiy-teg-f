@@ -189,12 +189,20 @@ main {
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--main-bg-color);
   margin: 25px 20px 0 0;
   z-index: 5;
   opacity: 0.4;
   mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--main-bg-color)) or
+    (-webkit-text-stroke: 1px var(--main-bg-color))
+) {
+  .image-container__lable {
+    -webkit-text-stroke: 1px var(--main-bg-color);
+    text-stroke: 1px var(--main-bg-color);
+  }
 }
 
 /* .card__image-container::before {
