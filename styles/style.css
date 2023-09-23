@@ -35,27 +35,35 @@
   align-items: center;
   min-height: 323px;
   max-width: 696px;
+  /* width: clamp(20.1875rem, 19.2852rem + 3.8498vw, 22.75rem); */
   max-height: 364px;
-  height: 364px;
+  height: clamp(20.1875rem, 11.9789rem + 35.0235vw, 43.5rem);
   margin: 102px auto 102px;
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  padding-bottom: 25px;
+  /* inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); */
+  /* padding-bottom: 25px; */
+  justify-content: end;
+  /* padding-bottom: 25px; */
 }
 
 .header-title {
-  font-size: clamp(3.0625rem, 2.6224rem + 1.8779vw, 4.3125rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+
   /* под мобилки другой сайз не забуд *********/
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
   margin-bottom: 20px;
-  margin-top: 133px;
+  /* margin-top: 133px; */
   /* СДЕЛАТЬ КЛЭМП ***************************** */
 }
 
+.theme-menu__list:last-child {
+  margin-bottom: 25px;
+}
+
 .header-text {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -140,7 +148,7 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 52px;
 }
 
 .card {
@@ -150,8 +158,21 @@ main {
   max-width: 696px;
   margin: 0 auto;
   border: 2px var(--main-font-color) solid;
+  /* outline: 2px var(--main-font-color) solid; */
   overflow: hidden;
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  /* inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); */
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.card-img {
+  height: 100%;
+  width: 100%;
+  /* object-fit: contain; */
 }
 
 .card__image-container {
@@ -171,7 +192,7 @@ main {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--main-bg-color);
   margin: 25px 20px 0 0;
-
+  z-index: 5;
   opacity: 0.4;
   mix-blend-mode: hard-light;
 }
@@ -191,13 +212,14 @@ main {
 } */
 
 .card-title {
-  font-family: Inter;
+  font-family: var(--primary-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   padding: 5px 0;
   padding-left: 10px;
+  padding-right: 25px;
 }
 
 /* .card-title::after {
@@ -206,16 +228,16 @@ main {
 } */
 
 .card-text {
-  font-family: Inter;
+  font-family: var(--primary-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21px; /* 116.667% */
+  line-height: 116.667%;
 }
 
 .card__footer-text {
   margin-block-start: 27px;
-  font-family: Inter;
+  font-family: var(--primary-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -243,6 +265,7 @@ main {
   height: 38px;
   position: relative;
   overflow: hidden;
+  text-transform: capitalize;
 }
 
 .card__like-button::before {
@@ -294,11 +317,39 @@ main {
   content: "heart";
 } */
 
-.card__content {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
+article:nth-child(2) .card-img {
+  /* filter: hue-rotate(300deg); */
+  /* filter: contrast(200%); */
+  filter: grayscale(50%);
 }
+
+article:nth-child(3) .card-img {
+  /* filter: contrast(200%); */
+  /* filter: brightness(150%) contrast(150%); */
+  filter: saturate(500%);
+}
+
+article:nth-child(4) .card-img {
+  filter: hue-rotate(30deg);
+}
+
+article:nth-child(5) .card-img {
+  filter: invert(80%);
+}
+
+article:nth-child(6) .card-img {
+  filter: sepia(100%);
+}
+
+article:nth-child(7) .card-img {
+  filter: blur(10px);
+}
+
+article:nth-child(8) .card-img {
+  filter: hue-rotate(100deg) opacity(70%) blur(2px) brightness(80%);
+}
+
+/* футер */
 
 .footer {
   display: flex;
@@ -315,7 +366,7 @@ main {
   font-weight: 400;
   line-height: 90%; /* 12.6px */
   border: 2px solid var(--main-font-color);
-  padding: 18.5px 5px;
+  padding: 15px 5px;
   margin-bottom: 100px;
   position: relative;
   overflow: hidden;
@@ -530,8 +581,8 @@ main {
 }
 /* .press-to-continue; */
 
-@media (width <= 375px) {
-  /* .header {
-    width: 100vw;
-  } */
+@media (width <= 376px) {
+  .card__content {
+    padding-right: 26px;
+  }
 }
