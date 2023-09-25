@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --primary-font: "Inter";
-  --accent-font: "PressStart2P";
+  --primary-font: "Inter", "Lato", "Verdana", sans-serif;
+  --accent-font: "PressStart2P", "Verdana", sans-serif;
   /* Укажи дополнительные шрифты */
 
   --main-font-color: black;
@@ -10,11 +10,10 @@
   --main-bg-color: white;
 
   --btn-text-color: white;
-  /* у темной темы черный вроде */
 
   --btn-transition-color: black;
-  /* у темной зеленый */
-  /* 00CC14 */
+
+  --floppy-color: white;
   --bg-gradient: repeating-linear-gradient(
       0deg,
       #d3d3d3 0px 2px,
@@ -22,4 +21,7 @@
     ),
     repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
     linear-gradient(180deg, #e7e7e7, #1a1a1a);
+  --font-weight: 400;
+  --card-title-weight: 700;
+  --card-text-weight: 400;
 }
