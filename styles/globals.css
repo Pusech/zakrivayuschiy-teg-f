@@ -47,3 +47,9 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

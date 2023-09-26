@@ -2,7 +2,7 @@
 
 :root {
   --primary-font: "Inter", "Lato", "Verdana", sans-serif;
-  --accent-font: "PressStart2P", "Verdana", sans-serif;
+  --accent-font: "PressStart2P", "Verdana", fantasy;
   /* Укажи дополнительные шрифты */
 
   --main-font-color: black;
